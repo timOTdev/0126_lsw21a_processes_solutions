@@ -1,4 +1,6 @@
-# Processes and System Calls
+# 0128_lsw21a_processes_solutions
+
+## Processes and System Calls
 
 Now that we've talked a bit about how processes and system calls work at a high level, it's time to apply these concepts by doing some exercises related to process creation and making system calls. We'll be utilizing the `fork()`, `exec()`, `wait()`, and `pipe()` system calls in order to create processes and even have them pass messages to each other.
 
@@ -112,7 +114,7 @@ int main(int argc, char *argv[])
         exit(1);
     } else if (rc == 0) {    // child process satisfies this branch
         printf("hello, child here (pid: %d) \n", (int) getpid());
-        char *myargs[3];    // allocate an array of chars to hold 3 bytes
+        char *myargs[3];    // allocate an array of chars to hold 3 char pointers
         // `strdup` duplicates the given input string 
         myargs[0] = strdup("wc");      // pass the name of the program we want to run as the first array element 
         myargs[1] = strdup("p3.c");    // argument: the file to count
@@ -189,4 +191,4 @@ Additionally, it's always a good idea to read the man pages for any system calls
  - The man page for the `pipe` system call: [https://linux.die.net/man/2/pipe](https://linux.die.net/man/2/pipe)
 
 ## Stretch Goal
-Open up the `/stretch` directory. In there, you'll find an involved exercise pertaining to file locking and concurrency. Read the README included in that directory for instructions on what to do.
+Open up the `/stretch` directory. In there, you'll find an involved exercise pertaining to file locking and concurrency. Read the README included in that directory for instructions on what to do. 

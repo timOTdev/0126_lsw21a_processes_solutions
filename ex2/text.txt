@@ -1,2 +1,2 @@
-parent 
-child 
+This is parent string!
+This is child string!

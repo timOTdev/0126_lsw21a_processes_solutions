@@ -1,4 +1,6 @@
-# Bankers and Concurrency
+# 0126_lsw21a_processes_solutions
+
+## Bankers and Concurrency
 
 This is an assignment to experiment with concurrency and some of the
 issues that arise with it.
